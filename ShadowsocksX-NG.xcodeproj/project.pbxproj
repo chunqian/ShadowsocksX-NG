@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		08FCA0FF1E24BE1A0070984F /* example-gui-config.json in Resources */ = {isa = PBXBuildFile; fileRef = 08FCA0FE1E24BE1A0070984F /* example-gui-config.json */; };
+		22CF1973281E6609005D6DC4 /* gfwlist.js in Resources */ = {isa = PBXBuildFile; fileRef = 22CF1972281E6609005D6DC4 /* gfwlist.js */; };
 		258E511BA910B0521B24DAB8 /* Pods_ShadowsocksX_NG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 283ED1A8E9B711AC65670031 /* Pods_ShadowsocksX_NG.framework */; };
 		9B07EFA71D048BBB0052D9DF /* ss-local in Resources */ = {isa = PBXBuildFile; fileRef = 9B07EFA61D048BBB0052D9DF /* ss-local */; };
 		9B07EFAC1D048E880052D9DF /* menu_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B07EFA81D048E880052D9DF /* menu_icon@2x.png */; };
@@ -30,7 +31,6 @@
 		9B3FFF1E1D0732660019A709 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3FFF1D1D0732660019A709 /* Utils.m */; };
 		9B3FFF211D08826E0019A709 /* PACUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3FFF201D08826E0019A709 /* PACUtils.swift */; };
 		9B3FFF231D088E8D0019A709 /* abp.js in Resources */ = {isa = PBXBuildFile; fileRef = 9B3FFF221D088E8D0019A709 /* abp.js */; };
-		9B3FFF271D0898EB0019A709 /* gfwlist.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9B3FFF261D0898EB0019A709 /* gfwlist.txt */; };
 		9B3FFF291D08A1DF0019A709 /* user-rule.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9B3FFF281D08A1DF0019A709 /* user-rule.txt */; };
 		9B3FFF321D08CEE40019A709 /* SWBQRCodeWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B3FFF311D08CEE40019A709 /* SWBQRCodeWindowController.m */; };
 		9B3FFF341D08CEF70019A709 /* SWBQRCodeWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B3FFF331D08CEF70019A709 /* SWBQRCodeWindowController.xib */; };
@@ -136,6 +136,7 @@
 		08FCA0FE1E24BE1A0070984F /* example-gui-config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "example-gui-config.json"; sourceTree = "<group>"; };
 		19083CFCED87354F006967FF /* Pods_ShadowsocksX_NGUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShadowsocksX_NGUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E7783AEDB4A3BDDC9FF16AC /* libPods-proxy_conf_helper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-proxy_conf_helper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		22CF1972281E6609005D6DC4 /* gfwlist.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = gfwlist.js; sourceTree = "<group>"; };
 		283ED1A8E9B711AC65670031 /* Pods_ShadowsocksX_NG.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShadowsocksX_NG.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		297AF069022A197FD8E9D226 /* Pods-proxy_conf_helper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-proxy_conf_helper.release.xcconfig"; path = "Pods/Target Support Files/Pods-proxy_conf_helper/Pods-proxy_conf_helper.release.xcconfig"; sourceTree = "<group>"; };
 		388120F062D7EB7DD0D8DDCA /* Pods_ShadowsocksX_NGTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShadowsocksX_NGTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -173,7 +174,6 @@
 		9B3FFF1F1D0734060019A709 /* Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		9B3FFF201D08826E0019A709 /* PACUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PACUtils.swift; sourceTree = "<group>"; };
 		9B3FFF221D088E8D0019A709 /* abp.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = abp.js; sourceTree = "<group>"; };
-		9B3FFF261D0898EB0019A709 /* gfwlist.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gfwlist.txt; sourceTree = "<group>"; };
 		9B3FFF281D08A1DF0019A709 /* user-rule.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "user-rule.txt"; sourceTree = "<group>"; };
 		9B3FFF301D08CEE40019A709 /* SWBQRCodeWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWBQRCodeWindowController.h; sourceTree = "<group>"; };
 		9B3FFF311D08CEE40019A709 /* SWBQRCodeWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWBQRCodeWindowController.m; sourceTree = "<group>"; };
@@ -309,7 +309,7 @@
 				9B172A6C1D0ADDDD00B87B9A /* Localizable.strings */,
 				9B3FFF4B1D09D8F70019A709 /* install_helper.sh */,
 				9B3FFF281D08A1DF0019A709 /* user-rule.txt */,
-				9B3FFF261D0898EB0019A709 /* gfwlist.txt */,
+				22CF1972281E6609005D6DC4 /* gfwlist.js */,
 				9B3FFF221D088E8D0019A709 /* abp.js */,
 				9B07EFA81D048E880052D9DF /* menu_icon@2x.png */,
 				9B07EFA91D048E880052D9DF /* menu_icon.png */,
@@ -614,6 +614,7 @@
 				9BCB1D6C20A15B0E005BABE7 /* libsodium.23.dylib in Resources */,
 				9BCB1D6D20A15B0E005BABE7 /* libcares.2.dylib in Resources */,
 				9BBE7B751F508A0E00E8FFE5 /* fix_dir_owner.sh in Resources */,
+				22CF1973281E6609005D6DC4 /* gfwlist.js in Resources */,
 				9B3F7BFF1E82BF5B00C68B75 /* libev.4.dylib in Resources */,
 				9B938D9A1E864B38005F5636 /* menu_g_icon@2x.png in Resources */,
 				9B938D9E1E864B38005F5636 /* menu_p_icon@2x.png in Resources */,
@@ -643,7 +644,6 @@
 				9B938D9D1E864B38005F5636 /* menu_p_icon.png in Resources */,
 				9B938D9B1E864B38005F5636 /* menu_m_icon.png in Resources */,
 				9B7297EC214DA88A00FD24AA /* ShareServerProfilesWindowController.xib in Resources */,
-				9B3FFF271D0898EB0019A709 /* gfwlist.txt in Resources */,
 				C6D429931DA75988002A5711 /* install_privoxy.sh in Resources */,
 				9B58320B1E7422DB009D5B7D /* http.png in Resources */,
 				9BC70EDC1D2E3E3100EDA4CA /* Localizable.strings in Resources */,

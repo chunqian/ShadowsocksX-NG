@@ -14,8 +14,6 @@ let OldErrorPACRulesDirPath = NSHomeDirectory() + "/.ShadowsocksX-NE/"
 let PACRulesDirPath = NSHomeDirectory() + "/.ShadowsocksX-NG/"
 let PACUserRuleFilePath = PACRulesDirPath + "user-rule.txt"
 let PACFilePath = PACRulesDirPath + "gfwlist.js"
-let GFWListFilePath = PACRulesDirPath + "gfwlist.txt"
-
 
 // Because of LocalSocks5.ListenPort may be changed
 func SyncPac() {
@@ -60,10 +58,10 @@ func GeneratePACFile() -> Bool {
         }
     }
     
-    // If gfwlist.txt is not exsited, copy from bundle
-    if !fileMgr.fileExists(atPath: GFWListFilePath) {
-        let src = Bundle.main.path(forResource: "gfwlist", ofType: "txt")
-        try! fileMgr.copyItem(atPath: src!, toPath: GFWListFilePath)
+    // If gfwlist.js is not exsited, copy from bundle
+    if !fileMgr.fileExists(atPath: PACFilePath) {
+        let src = Bundle.main.path(forResource: "gfwlist", ofType: "js")
+        try! fileMgr.copyItem(atPath: src!, toPath: PACFilePath)
     }
     
     // If user-rule.txt is not exsited, copy from bundle
@@ -72,114 +70,5 @@ func GeneratePACFile() -> Bool {
         try! fileMgr.copyItem(atPath: src!, toPath: PACUserRuleFilePath)
     }
     
-    let socks5Address = UserDefaults.standard.string(forKey: "LocalSocks5.ListenAddress")!
-    let socks5Port = UserDefaults.standard.integer(forKey: "LocalSocks5.ListenPort")
-    
-    do {
-        let gfwlist = try String(contentsOfFile: GFWListFilePath, encoding: String.Encoding.utf8)
-        if let data = Data(base64Encoded: gfwlist, options: .ignoreUnknownCharacters) {
-            let str = String(data: data, encoding: String.Encoding.utf8)
-            var lines = str!.components(separatedBy: CharacterSet.newlines)
-            
-            do {
-                let userRuleStr = try String(contentsOfFile: PACUserRuleFilePath, encoding: String.Encoding.utf8)
-                let userRuleLines = userRuleStr.components(separatedBy: CharacterSet.newlines)
-                
-                lines = userRuleLines + lines
-            } catch {
-                NSLog("Not found user-rule.txt")
-            }
-            
-            // Filter empty and comment lines
-            lines = lines.filter({ (s: String) -> Bool in
-                if s.isEmpty {
-                    return false
-                }
-                let c = s[s.startIndex]
-                if c == "!" || c == "[" {
-                    return false
-                }
-                return true
-            })
-            
-            do {
-                // rule lines to json array
-                let rulesJsonData: Data
-                    = try JSONSerialization.data(withJSONObject: lines, options: .prettyPrinted)
-                let rulesJsonStr = String(data: rulesJsonData, encoding: String.Encoding.utf8)
-                
-                // Get raw pac js
-                let jsPath = Bundle.main.url(forResource: "abp", withExtension: "js")
-                let jsData = try? Data(contentsOf: jsPath!)
-                var jsStr = String(data: jsData!, encoding: String.Encoding.utf8)
-                
-                // Replace rules placeholder in pac js
-                jsStr = jsStr!.replacingOccurrences(of: "__RULES__"
-                    , with: rulesJsonStr!)
-                // Replace __SOCKS5PORT__ palcholder in pac js
-                jsStr = jsStr!.replacingOccurrences(of: "__SOCKS5PORT__"
-                    , with: "\(socks5Port)")
-                // Replace __SOCKS5ADDR__ palcholder in pac js
-                var sin6 = sockaddr_in6()
-                if socks5Address.withCString({ cstring in inet_pton(AF_INET6, cstring, &sin6.sin6_addr) }) == 1 {
-                    jsStr = jsStr!.replacingOccurrences(of: "__SOCKS5ADDR__"
-                        , with: "[\(socks5Address)]")
-                } else {
-                    jsStr = jsStr!.replacingOccurrences(of: "__SOCKS5ADDR__"
-                        , with: socks5Address)
-                }
-                
-                // Write the pac js to file.
-                try jsStr!.data(using: String.Encoding.utf8)?
-                    .write(to: URL(fileURLWithPath: PACFilePath), options: .atomic)
-                
-                return true
-            } catch {
-                
-            }
-        }
-        
-    } catch {
-        NSLog("Not found gfwlist.txt")
-    }
     return false
-}
-
-func UpdatePACFromGFWList() {
-    // Make the dir if rulesDirPath is not exesited.
-    if !FileManager.default.fileExists(atPath: PACRulesDirPath) {
-        do {
-            try FileManager.default.createDirectory(atPath: PACRulesDirPath
-                , withIntermediateDirectories: true, attributes: nil)
-        } catch {
-        }
-    }
-    
-    let url = UserDefaults.standard.string(forKey: "GFWListURL")
-    Alamofire.request(url!)
-        .responseString {
-            response in
-            if response.result.isSuccess {
-                if let v = response.result.value {
-                    do {
-                        try v.write(toFile: GFWListFilePath, atomically: true, encoding: String.Encoding.utf8)
-                        if GeneratePACFile() {
-                            // Popup a user notification
-                            let notification = NSUserNotification()
-                            notification.title = "PAC has been updated by latest GFW List.".localized
-                            NSUserNotificationCenter.default
-                                .deliver(notification)
-                        }
-                    } catch {
-                        
-                    }
-                }
-            } else {
-                // Popup a user notification
-                let notification = NSUserNotification()
-                notification.title = "Failed to download latest GFW List.".localized
-                NSUserNotificationCenter.default
-                    .deliver(notification)
-            }
-        }
 }
