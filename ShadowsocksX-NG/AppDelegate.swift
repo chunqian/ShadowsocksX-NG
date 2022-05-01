@@ -82,7 +82,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         // Prepare ss-local
         InstallSSLocal()
         InstallPrivoxy()
-        InstallSimpleObfs()
         InstallKcptun()
         
         // Prepare defaults

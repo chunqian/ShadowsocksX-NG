@@ -11,7 +11,6 @@ import Foundation
 let SS_LOCAL_VERSION = "3.1.3"
 let KCPTUN_CLIENT_VERSION = "v20170718"
 let PRIVOXY_VERSION = "3.0.26.static"
-let SIMPLE_OBFS_VERSION = "0.0.5_1"
 let APP_SUPPORT_DIR = "/Library/Application Support/ShadowsocksX-NG/"
 let LAUNCH_AGENT_DIR = "/Library/LaunchAgents/"
 let LAUNCH_AGENT_CONF_SSLOCAL_NAME = "com.qiuyuzhou.shadowsocksX-NG.local.plist"
@@ -194,27 +193,6 @@ func SyncSSLocal() {
     }
     SyncPac()
     SyncPrivoxy()
-}
-
-// --------------------------------------------------------------------------------
-//  MARK: simple-obfs
-
-func InstallSimpleObfs() {
-    let fileMgr = FileManager.default
-    let homeDir = NSHomeDirectory()
-    let appSupportDir = homeDir + APP_SUPPORT_DIR
-    if !fileMgr.fileExists(atPath: appSupportDir + "simple-obfs-\(SIMPLE_OBFS_VERSION)/obfs-local")
-        || !fileMgr.fileExists(atPath: appSupportDir + "plugins/obfs-local") {
-        let bundle = Bundle.main
-        let installerPath = bundle.path(forResource: "install_simple_obfs.sh", ofType: nil)
-        let task = Process.launchedProcess(launchPath: "/bin/sh", arguments: [installerPath!])
-        task.waitUntilExit()
-        if task.terminationStatus == 0 {
-            NSLog("Install simple-obfs succeeded.")
-        } else {
-            NSLog("Install simple-obfs failed.")
-        }
-    }
 }
 
 // --------------------------------------------------------------------------------
