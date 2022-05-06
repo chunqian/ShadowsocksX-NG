@@ -12,6 +12,17 @@ var rules = [
   "||shadowsocks.com",
   "||apple.com",
   "||steampowered.com",
+  "||github.com",
+  "||githubassets.com",
+  "||githubusercontent.com",
+  "||github.map.fastly.net",
+  "||github.global.ssl.fastly.net",
+  "||github.io",
+  "||github.blog",
+  "||s3.amazonaws.com",
+  "||githubstatus.com",
+  "||github.community",
+  "||github.dev",
 ];
 
 /*
@@ -20,10 +31,8 @@ var rules = [
  */
 
 var white_domains = {
-  "timsum.changeip.net": 1,
   "steampowered.com": 1,
   "easyzhuang.com": 1,
-  "google.com": 1,
   "yourdomainhere.com": 1,
   "6.com": 1,
   "gold.net": 1,
