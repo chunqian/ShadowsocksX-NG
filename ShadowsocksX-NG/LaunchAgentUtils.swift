@@ -55,7 +55,7 @@ func generateSSLocalLauchAgentPlist() -> Bool {
     if enableVerboseMode {
         arguments.append("-v")
     }
-    arguments.append("--reuse-port")
+//    arguments.append("--reuse-port")
     
     // For a complete listing of the keys, see the launchd.plist manual page.
     let dyld_library_paths = [
@@ -110,8 +110,7 @@ func InstallSSLocal() {
     let fileMgr = FileManager.default
     let homeDir = NSHomeDirectory()
     let appSupportDir = homeDir+APP_SUPPORT_DIR
-    if !fileMgr.fileExists(atPath: appSupportDir + "ss-local-\(SS_LOCAL_VERSION)/ss-local")
-       || !fileMgr.fileExists(atPath: appSupportDir + "ss-local-\(SS_LOCAL_VERSION)/libmbedcrypto.0.dylib") {
+    if !fileMgr.fileExists(atPath: appSupportDir + "ss-local-\(SS_LOCAL_VERSION)/ss-local") {
         let bundle = Bundle.main
         let installerPath = bundle.path(forResource: "install_ss_local.sh", ofType: nil)
         let task = Process.launchedProcess(launchPath: installerPath!, arguments: [""])
