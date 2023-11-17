@@ -16,7 +16,6 @@
 // https://github.com/stephencelis/BRLOptionParser
 #import <BRLOptionParser/BRLOptionParser.h>
 
-
 int main(int argc, const char * argv[])
 {
     NSString* mode;

@@ -7,8 +7,6 @@
 //
 
 import Cocoa
-import RxCocoa
-import RxSwift
 
 class PreferencesWinController: NSWindowController {
     

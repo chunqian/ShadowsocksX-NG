@@ -7,8 +7,6 @@
 //
 
 import Cocoa
-import RxCocoa
-import RxSwift
 
 class ProxyInterfacesViewCtrl: NSViewController, NSTableViewDataSource, NSTableViewDelegate {
     

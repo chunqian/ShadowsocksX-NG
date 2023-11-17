@@ -29,12 +29,6 @@
 /* Class = "NSToolbarItem"; paletteLabel = "Interfaces"; ObjectID = "Bdm-pj-Ckd"; */
 "Bdm-pj-Ckd.paletteLabel" = "网络接口";
 
-/* Class = "NSToolbarItem"; label = "Kcptun"; ObjectID = "CIc-BO-xjN"; */
-"CIc-BO-xjN.label" = "Kcptun";
-
-/* Class = "NSToolbarItem"; paletteLabel = "Kcptun"; ObjectID = "CIc-BO-xjN"; */
-"CIc-BO-xjN.paletteLabel" = "Kcptun";
-
 /* Class = "NSToolbarItem"; label = "HTTP"; ObjectID = "D0F-6S-Ztu"; */
 "D0F-6S-Ztu.label" = "HTTP";
 
@@ -49,9 +43,6 @@
 
 /* Class = "NSTabViewItem"; label = "HTTP"; ObjectID = "F5Q-Ce-JJN"; */
 "F5Q-Ce-JJN.label" = "HTTP";
-
-/* Class = "NSTextFieldCell"; title = "Num of Kcptun connections:"; ObjectID = "FSi-9j-QBe"; */
-"FSi-9j-QBe.title" = "Num of Kcptun connections:";
 
 /* Class = "NSTextFieldCell"; title = "Local PAC Server Listen Port:"; ObjectID = "IMQ-c4-gmc"; */
 "IMQ-c4-gmc.title" = "本地PAC服务器监听端口:";
@@ -83,9 +74,6 @@
 /* Class = "NSTabViewItem"; label = "Interfaces"; ObjectID = "eDR-CZ-P4p"; */
 "eDR-CZ-P4p.label" = "网络接口";
 
-/* Class = "NSTextFieldCell"; title = "Local Kcptun Listen Address:"; ObjectID = "ejW-7L-9bP"; */
-"ejW-7L-9bP.title" = "Kcptun 本地监听地址:";
-
 /* Class = "NSTabViewItem"; label = "Shortcuts"; ObjectID = "gpA-k4-fiw"; */
 "gpA-k4-fiw.label" = "快捷键";
 
@@ -109,12 +97,6 @@
 
 /* Class = "NSToolbarItem"; paletteLabel = "Shortcuts"; ObjectID = "kzb-T5-CPp"; */
 "kzb-T5-CPp.paletteLabel" = "快捷键";
-
-/* Class = "NSTabViewItem"; label = "Kcptun"; ObjectID = "n2m-5k-0Ws"; */
-"n2m-5k-0Ws.label" = "Kcptun";
-
-/* Class = "NSTextFieldCell"; title = "Local Kcptun Listen Port:"; ObjectID = "pdk-mh-FAj"; */
-"pdk-mh-FAj.title" = "Kcptun 本地监听端口:";
 
 /* Class = "NSTextFieldCell"; title = "Timeout:"; ObjectID = "sQ9-bj-V0I"; */
 "sQ9-bj-V0I.title" = "超时:";

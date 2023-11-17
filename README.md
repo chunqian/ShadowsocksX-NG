@@ -1,6 +1,6 @@
 # ShadowsocksX-NG
 
-Current version is 1.8.2
+Current version is 2.0
 
 [![Build Status](https://travis-ci.org/shadowsocks/ShadowsocksX-NG.svg?branch=develop)](https://travis-ci.org/shadowsocks/ShadowsocksX-NG)
 
@@ -33,8 +33,7 @@ From [here](https://github.com/shadowsocks/ShadowsocksX-NG/releases/)
 
 ## Features
 
-- `ss-local` from shadowsocks-libev 3.2.0
-- Support SIP003 plugins. Embed `kcptun`.
+- `ss-local` from shadowsocks-rust 1.14.3
 - Could update PAC by download GFW List from GitHub.
 - Share your server profiles by qrcode or url.
 - Import server profile urls from pasteboard.

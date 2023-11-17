@@ -7,21 +7,10 @@ target 'ShadowsocksX-NG' do
   use_frameworks!
 
   # Pods for ShadowsocksX-NG
-  pod 'Alamofire', '~> 4.7.2'
-  pod "GCDWebServer", "~> 3.0"
-  pod 'MASShortcut', '~> 2'
-  
-  # https://github.com/ReactiveX/RxSwift/blob/master/Documentation/GettingStarted.md
-  pod 'RxSwift',    '~> 4.1.2'
-  pod 'RxCocoa',    '~> 4.1.2'
-
-  target 'ShadowsocksX-NGTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
+  pod "GCDWebServer", "= 3.4.2"
+  pod 'MASShortcut', '= 2.3.6'
 end
 
 target 'proxy_conf_helper' do
-  pod 'BRLOptionParser', '~> 0.3.1'
+  pod 'BRLOptionParser', '= 0.3.1'
 end

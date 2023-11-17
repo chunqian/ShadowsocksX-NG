@@ -8,6 +8,16 @@
 
 import Cocoa
 
+struct URLComponentsError: Error {
+    var url: URLComponents
+}
+
+extension URLComponents {
+    public func asURL() throws -> URL {
+        guard let url = url else { throw URLComponentsError(url: self) }
+        return url
+    }
+}
 
 class ServerProfile: NSObject, NSCopying {
     
