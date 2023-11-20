@@ -2,10 +2,6 @@
 
 Current version is 2.0
 
-[![Build Status](https://travis-ci.org/shadowsocks/ShadowsocksX-NG.svg?branch=develop)](https://travis-ci.org/shadowsocks/ShadowsocksX-NG)
-
-Next Generation of [ShadowsocksX](https://github.com/shadowsocks/shadowsocks-iOS)
-
 ## Why a new implementation?
 
 It's hard to maintain the original implementation as there is too much unused code in it.
