@@ -4,6 +4,5 @@
 
 #import <CommonCrypto/CommonCrypto.h>
 
-#import "LaunchAtLoginController.h"
 #import "ProxyConfHelper.h"
 #import "ProxyConfTool.h"

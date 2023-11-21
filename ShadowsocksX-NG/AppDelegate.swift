@@ -67,8 +67,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
-        _ = LaunchAtLoginController() // Ensure set when launch
-        
         NSUserNotificationCenter.default.delegate = self
         
         self.ensureLaunchAgentsDirOwner()
@@ -88,7 +86,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             "LocalSocks5.Timeout": NSNumber(value: 60 as UInt),
             "LocalSocks5.EnableUDPRelay": NSNumber(value: false as Bool),
             "LocalSocks5.EnableVerboseMode": NSNumber(value: false as Bool),
-            "GFWListURL": "http://localhost/gfwlist.js",
             "AutoConfigureNetworkServices": NSNumber(value: true as Bool),
             "LocalHTTP.ListenAddress": "127.0.0.1",
             "LocalHTTP.ListenPort": NSNumber(value: 1087 as UInt16),
