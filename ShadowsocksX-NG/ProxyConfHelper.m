@@ -165,7 +165,7 @@ GCDWebServer *webServer =nil;
 }
 
 + (void)disableProxy {
-    // 带上所有参数是为了判断是否原有代理设置是否由ssx-ng设置的。如果是用户手工设置的其他配置，则不进行清空。
+    // 带上所有参数是为了判断是否原有代理设置是否由ssx-ng设置的. 如果是用户手工设置的其他配置, 则不进行清空.
     NSURL* url = [NSURL URLWithString: [self getHttpPACUrl]];
     NSUInteger port = [[NSUserDefaults standardUserDefaults]integerForKey:@"LocalSocks5.ListenPort"];
     
@@ -217,7 +217,7 @@ GCDWebServer *webServer =nil;
 }
 
 + (void)stopPACServer {
-    //原版似乎没有处理这个，本来设计计划如果切换到全局模式或者手动模式就关掉webserver 似乎没有这个必要了？
+    //原版似乎没有处理这个, 本来设计计划如果切换到全局模式或者手动模式就关掉webserver 似乎没有这个必要了?
     if ([webServer isRunning]) {
         [webServer stop];
     }

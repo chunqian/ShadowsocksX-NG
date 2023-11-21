@@ -128,41 +128,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
             }
         )
         
-        notifyCenter.addObserver(forName: NOTIFY_TOGGLE_RUNNING_SHORTCUT, object: nil, queue: nil
-            , using: {
-                (note) in
-                self.doToggleRunning(showToast: true)
-            }
-        )
-        
-        notifyCenter.addObserver(forName: NOTIFY_SWITCH_PROXY_MODE_SHORTCUT, object: nil, queue: nil
-            , using: {
-                (note) in
-                let mode = defaults.string(forKey: "ShadowsocksRunningMode")!
-                
-                var toastMessage: String!;
-                switch mode {
-                case "auto":
-                    defaults.setValue("global", forKey: "ShadowsocksRunningMode")
-                    toastMessage = "Global Mode".localized
-                case "global":
-                    defaults.setValue("manual", forKey: "ShadowsocksRunningMode")
-                     toastMessage = "Manual Mode".localized
-                 case "manual":
-                    defaults.setValue("auto", forKey: "ShadowsocksRunningMode")
-                    toastMessage = "Auto Mode By PAC".localized
-                default:
-                    defaults.setValue("auto", forKey: "ShadowsocksRunningMode")
-                    toastMessage = "Auto Mode By PAC".localized
-                }
-                
-                self.updateRunningModeMenu()
-                self.applyConfig()
-                
-                self.makeToast(toastMessage)
-            }
-        )
-        
         updateMainMenu()
         updateServersMenu()
         updateRunningModeMenu()
@@ -170,9 +135,6 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSUserNotificationCenterDele
         ProxyConfHelper.install()
         ProxyConfHelper.startMonitorPAC()
         applyConfig()
-
-        // Register global hotkey
-        ShortcutsController.bindShortcuts()
     }
     
     func applicationWillTerminate(_ aNotification: Notification) {

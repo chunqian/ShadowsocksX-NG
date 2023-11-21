@@ -3,24 +3,20 @@ PODS:
   - GCDWebServer (3.4.2):
     - GCDWebServer/Core (= 3.4.2)
   - GCDWebServer/Core (3.4.2)
-  - MASShortcut (2.3.6)
 
 DEPENDENCIES:
   - BRLOptionParser (= 0.3.1)
   - GCDWebServer (= 3.4.2)
-  - MASShortcut (= 2.3.6)
 
 SPEC REPOS:
   trunk:
     - BRLOptionParser
     - GCDWebServer
-    - MASShortcut
 
 SPEC CHECKSUMS:
   BRLOptionParser: a03256a8ff003ca1f5376c55f55f210e085a3958
   GCDWebServer: 8d67ee9f634b4bb91eb4b8aee440318a5fc6debd
-  MASShortcut: 9c215e8a8a78f3d01ce56da48e2730ab66b538fa
 
-PODFILE CHECKSUM: 8dfc74eb8e2727df5eaa7a7640648a7f3d0e9a4c
+PODFILE CHECKSUM: ac22ca7b97abcd9f162655afae61214822ce219d
 
 COCOAPODS: 1.12.1

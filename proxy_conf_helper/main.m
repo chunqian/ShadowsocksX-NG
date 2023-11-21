@@ -125,7 +125,7 @@ int main(int argc, const char * argv[])
         [proxies setObject:[NSNumber numberWithInt:0] forKey:(NSString *)kCFNetworkProxiesSOCKSEnable];
         [proxies setObject:@[] forKey:(NSString *)kCFNetworkProxiesExceptionsList];
         
-        // 遍历系统中的网络设备列表，设置 AirPort 和 Ethernet 的代理
+        // 遍历系统中的网络设备列表, 设置 AirPort 和 Ethernet 的代理
         for (NSString *key in [sets allKeys]) {
             NSMutableDictionary *dict = [sets objectForKey:key];
             NSString *hardware = [dict valueForKeyPath:@"Interface.Hardware"];
@@ -184,7 +184,7 @@ int main(int argc, const char * argv[])
                                               , (__bridge CFDictionaryRef)proxies);
                 } else if ([mode isEqualToString:@"off"]) {
                     if (pacURL != nil && portString != nil) {
-                        // 取原来的配置，判断是否为shadowsocksX-NG设置的
+                        // 取原来的配置, 判断是否为shadowsocksX-NG设置的
                         NSDictionary* oldProxies
                             = (__bridge NSDictionary*)SCPreferencesPathGetValue(prefRef
                                                                                 , (__bridge CFStringRef)prefPath);
