@@ -17,7 +17,8 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" visibleAtLaunch="NO" animationBehavior="default" id="kRK-Pd-y69" customClass="NSPanel">
             <windowStyleMask key="styleMask" closable="YES" miniaturizable="YES" resizable="YES" utility="YES"/>
-            <rect key="contentRect" x="139" y="81" width="300" height="100"/>
+            <windowPositionMask key="initialPositionMask" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="139" y="390" width="300" height="100"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="900"/>
             <value key="minSize" type="size" width="200" height="100"/>
             <view key="contentView" id="KRY-zc-8By" userLabel="Panel View">

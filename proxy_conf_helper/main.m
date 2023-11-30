@@ -5,8 +5,6 @@
 //  Created by clowwindy on 14-3-15.
 //  Copyright (c) 2014年 clowwindy. All rights reserved.
 //
-// Changed by QiuYuzhou
-
 
 #import <Foundation/Foundation.h>
 #import <SystemConfiguration/SystemConfiguration.h>

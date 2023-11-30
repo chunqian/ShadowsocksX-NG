@@ -1,6 +1,6 @@
 # ShadowsocksX-NG
 
-Current version is 2.0
+Current version is 2.0.2
 
 ### Running
 

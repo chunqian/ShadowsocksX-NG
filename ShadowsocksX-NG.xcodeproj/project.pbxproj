@@ -45,7 +45,6 @@
 		9B938D9C1E864B38005F5636 /* menu_m_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B938D961E864B38005F5636 /* menu_m_icon@2x.png */; };
 		9B938D9D1E864B38005F5636 /* menu_p_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B938D971E864B38005F5636 /* menu_p_icon.png */; };
 		9B938D9E1E864B38005F5636 /* menu_p_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9B938D981E864B38005F5636 /* menu_p_icon@2x.png */; };
-		9B9F13A71E8A28B300DE4794 /* LaunchHelper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9B9F13A61E8A282D00DE4794 /* LaunchHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9BA04B231D23D5A5005AAD7F /* ProxyConfTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BA04B221D23D5A5005AAD7F /* ProxyConfTool.m */; };
 		9BAFE2E21E83ED7F00F71CCE /* PreferencesWinController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9BAFE2E41E83ED7F00F71CCE /* PreferencesWinController.xib */; };
 		9BB706A71D1B982300551F0E /* SWBApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BB706A51D1B982300551F0E /* SWBApplication.m */; };
@@ -74,13 +73,6 @@
 			remoteGlobalIDString = 9B3FFF431D09CD3B0019A709;
 			remoteInfo = proxy_conf_helper;
 		};
-		9B9F13A51E8A282D00DE4794 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9B9F13A11E8A282C00DE4794 /* LaunchHelper.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9B9F138D1E8A282C00DE4794;
-			remoteInfo = LaunchHelper;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -99,7 +91,6 @@
 			dstPath = Contents/Library/LoginItems;
 			dstSubfolderSpec = 1;
 			files = (
-				9B9F13A71E8A28B300DE4794 /* LaunchHelper.app in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,7 +147,6 @@
 		9B938D961E864B38005F5636 /* menu_m_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_m_icon@2x.png"; sourceTree = "<group>"; };
 		9B938D971E864B38005F5636 /* menu_p_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_p_icon.png; sourceTree = "<group>"; };
 		9B938D981E864B38005F5636 /* menu_p_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_p_icon@2x.png"; sourceTree = "<group>"; };
-		9B9F13A11E8A282C00DE4794 /* LaunchHelper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = LaunchHelper.xcodeproj; path = LaunchHelper/LaunchHelper.xcodeproj; sourceTree = "<group>"; };
 		9BA04B211D23D5A5005AAD7F /* ProxyConfTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProxyConfTool.h; sourceTree = "<group>"; };
 		9BA04B221D23D5A5005AAD7F /* ProxyConfTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProxyConfTool.m; sourceTree = "<group>"; };
 		9BAFE2E31E83ED7F00F71CCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PreferencesWinController.xib; sourceTree = "<group>"; };
@@ -252,7 +242,6 @@
 			children = (
 				9B5831FA1E73098F009D5B7D /* README.md */,
 				9B172A601D0ADA5B00B87B9A /* genstrings.py */,
-				9B9F13A11E8A282C00DE4794 /* LaunchHelper.xcodeproj */,
 				9B0BFFE71D0460A70040E62B /* ShadowsocksX-NG */,
 				9B3FFF451D09CD3B0019A709 /* proxy_conf_helper */,
 				9B0BFFE61D0460A70040E62B /* Products */,
@@ -342,14 +331,6 @@
 			name = privoxy;
 			sourceTree = "<group>";
 		};
-		9B9F13A21E8A282C00DE4794 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9B9F13A61E8A282D00DE4794 /* LaunchHelper.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		D3CE66CC039F651F28057DDB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -417,9 +398,11 @@
 					9B0BFFE41D0460A70040E62B = {
 						CreatedOnToolsVersion = 7.3.1;
 						LastSwiftMigration = 0900;
+						ProvisioningStyle = Manual;
 					};
 					9B3FFF431D09CD3B0019A709 = {
 						CreatedOnToolsVersion = 7.3.1;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -436,12 +419,6 @@
 			mainGroup = 9B0BFFDC1D0460A70040E62B;
 			productRefGroup = 9B0BFFE61D0460A70040E62B /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 9B9F13A21E8A282C00DE4794 /* Products */;
-					ProjectRef = 9B9F13A11E8A282C00DE4794 /* LaunchHelper.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				9B0BFFE41D0460A70040E62B /* ShadowsocksX-NG */,
@@ -449,16 +426,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		9B9F13A61E8A282D00DE4794 /* LaunchHelper.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = LaunchHelper.app;
-			remoteRef = 9B9F13A51E8A282D00DE4794 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		9B0BFFE31D0460A70040E62B /* Resources */ = {
@@ -756,9 +723,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = "";
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "ShadowsocksX-NG/Info.plist";
@@ -769,9 +738,10 @@
 					"$(PROJECT_DIR)/ShadowsocksX-NG",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MARKETING_VERSION = 2.0.1;
+				MARKETING_VERSION = 2.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.qiuyuzhou.ShadowsocksX-NG";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ShadowsocksX-NG/ShadowsocksX-NG-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -786,9 +756,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = "";
 				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "ShadowsocksX-NG/Info.plist";
@@ -799,9 +771,10 @@
 					"$(PROJECT_DIR)/ShadowsocksX-NG",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MARKETING_VERSION = 2.0.1;
+				MARKETING_VERSION = 2.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.qiuyuzhou.ShadowsocksX-NG";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ShadowsocksX-NG/ShadowsocksX-NG-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
@@ -812,8 +785,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B4E6A97CA843F3943524B686 /* Pods-proxy_conf_helper.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.qiuyuzhou.ShadowsocksX-NG.ProxyConfHelper";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -822,8 +801,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 297AF069022A197FD8E9D226 /* Pods-proxy_conf_helper.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.qiuyuzhou.ShadowsocksX-NG.ProxyConfHelper";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
