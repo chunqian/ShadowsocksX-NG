@@ -28,13 +28,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="540" height="326"/>
                         <font key="font" metaFont="system"/>
                         <tabViewItems>
-                            <tabViewItem label="General" identifier="general" id="xbG-eW-Prj">
-                                <view key="view" id="78E-rb-Ecu">
-                                    <rect key="frame" x="0.0" y="0.0" width="540" height="326"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                </view>
-                            </tabViewItem>
-                            <tabViewItem label="Advance" identifier="adv" id="ksf-9b-qoz" userLabel="Advanced">
+                            <tabViewItem label="General" identifier="general" id="ksf-9b-qoz" userLabel="General">
                                 <view key="view" id="Pc1-f7-0zA">
                                     <rect key="frame" x="0.0" y="0.0" width="540" height="326"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -316,7 +310,7 @@
                                             <rect key="frame" x="20" y="110" width="500" height="118"/>
                                             <clipView key="contentView" id="9Wy-0J-wQ8">
                                                 <rect key="frame" x="1" y="1" width="498" height="116"/>
-                                                <autoresizingMask key="autoresizingMask"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" id="Vp3-dp-iqv">
                                                         <rect key="frame" x="0.0" y="0.0" width="498" height="116"/>
@@ -451,13 +445,6 @@
                     </toolbarItem>
                     <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="hn4-gj-wF1"/>
                     <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="hy4-IW-j13"/>
-                    <toolbarItem implicitItemIdentifier="20667A16-FBAB-459E-9094-87ABC9B66795" explicitItemIdentifier="adv" label="Advanced" paletteLabel="Advanced" tag="-1" image="NSAdvanced" selectable="YES" id="kuN-wm-bl5">
-                        <size key="minSize" width="22" height="22"/>
-                        <size key="maxSize" width="22" height="22"/>
-                        <connections>
-                            <action selector="toolbarActionWithSender:" target="-2" id="W2m-K9-R3F"/>
-                        </connections>
-                    </toolbarItem>
                     <toolbarItem implicitItemIdentifier="6CA73D5D-9BB2-495A-8658-D0A96900A764" explicitItemIdentifier="http" label="HTTP" paletteLabel="HTTP" tag="-1" image="http" selectable="YES" id="D0F-6S-Ztu">
                         <size key="minSize" width="22" height="22"/>
                         <size key="maxSize" width="22" height="22"/>
@@ -475,7 +462,6 @@
                 </allowedToolbarItems>
                 <defaultToolbarItems>
                     <toolbarItem reference="Mp8-cF-kQ7"/>
-                    <toolbarItem reference="kuN-wm-bl5"/>
                     <toolbarItem reference="D0F-6S-Ztu"/>
                     <toolbarItem reference="Bdm-pj-Ckd"/>
                     <toolbarItem reference="hy4-IW-j13"/>
@@ -503,7 +489,6 @@
         </customObject>
     </objects>
     <resources>
-        <image name="NSAdvanced" width="32" height="32"/>
         <image name="NSNetwork" width="32" height="32"/>
         <image name="NSPreferencesGeneral" width="32" height="32"/>
         <image name="http" width="512" height="512"/>
