@@ -294,7 +294,7 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <button translatesAutoresizingMaskIntoConstraints="NO" id="x9X-2w-cOy">
-                                            <rect key="frame" x="18" y="240" width="260" height="18"/>
+                                            <rect key="frame" x="18" y="244" width="260" height="18"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="258" id="MG5-cc-BIh"/>
                                             </constraints>
@@ -307,13 +307,13 @@
                                             </connections>
                                         </button>
                                         <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGc-zC-AYJ">
-                                            <rect key="frame" x="20" y="110" width="500" height="118"/>
+                                            <rect key="frame" x="20" y="107" width="500" height="125"/>
                                             <clipView key="contentView" id="9Wy-0J-wQ8">
-                                                <rect key="frame" x="1" y="1" width="498" height="116"/>
+                                                <rect key="frame" x="1" y="1" width="498" height="123"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" id="Vp3-dp-iqv">
-                                                        <rect key="frame" x="0.0" y="0.0" width="498" height="116"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="498" height="123"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <size key="intercellSpacing" width="3" height="2"/>
                                                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -356,10 +356,7 @@
                                             </scroller>
                                         </scrollView>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fMc-SG-EDy">
-                                            <rect key="frame" x="18" y="265" width="440" height="41"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="41" id="uEL-3g-NyL"/>
-                                            </constraints>
+                                            <rect key="frame" x="18" y="274" width="440" height="32"/>
                                             <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="Which network interfaces proxy setting would be controlled by ShadowsocksX-NG" id="t0I-6n-gnu">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -406,18 +403,18 @@
                                     <constraints>
                                         <constraint firstItem="dGc-zC-AYJ" firstAttribute="trailing" secondItem="fMc-SG-EDy" secondAttribute="trailing" constant="64" id="3Zz-40-KQq"/>
                                         <constraint firstAttribute="trailing" secondItem="qG0-rB-6MR" secondAttribute="trailing" constant="20" symbolic="YES" id="FPF-lZ-XI4"/>
+                                        <constraint firstItem="x9X-2w-cOy" firstAttribute="top" secondItem="fMc-SG-EDy" secondAttribute="bottom" constant="13" id="McD-Vf-fBq"/>
                                         <constraint firstItem="qG0-rB-6MR" firstAttribute="leading" secondItem="1lH-rX-WZT" secondAttribute="trailing" constant="9" id="SMh-gj-3ha"/>
                                         <constraint firstAttribute="trailing" secondItem="N84-AY-ecA" secondAttribute="trailing" constant="20" symbolic="YES" id="Uag-W2-BfP"/>
                                         <constraint firstItem="dGc-zC-AYJ" firstAttribute="top" secondItem="x9X-2w-cOy" secondAttribute="bottom" constant="13" id="Vl7-m0-TAK"/>
                                         <constraint firstItem="x9X-2w-cOy" firstAttribute="leading" secondItem="fMc-SG-EDy" secondAttribute="leading" id="XxO-Kg-0A0"/>
                                         <constraint firstItem="N84-AY-ecA" firstAttribute="top" secondItem="1lH-rX-WZT" secondAttribute="bottom" constant="13" id="YQ8-Ic-aQJ"/>
-                                        <constraint firstItem="x9X-2w-cOy" firstAttribute="top" secondItem="Ati-LQ-RB7" secondAttribute="top" constant="69" id="eQy-6U-sR6"/>
-                                        <constraint firstItem="x9X-2w-cOy" firstAttribute="top" secondItem="fMc-SG-EDy" secondAttribute="bottom" constant="8" symbolic="YES" id="hmT-Zp-1O2"/>
                                         <constraint firstItem="qG0-rB-6MR" firstAttribute="baseline" secondItem="1lH-rX-WZT" secondAttribute="baseline" id="iFX-QW-es0"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="x9X-2w-cOy" secondAttribute="trailing" constant="20" symbolic="YES" id="j55-Yi-CF8"/>
                                         <constraint firstItem="dGc-zC-AYJ" firstAttribute="leading" secondItem="x9X-2w-cOy" secondAttribute="leading" id="jdE-no-Bqt"/>
                                         <constraint firstItem="1lH-rX-WZT" firstAttribute="leading" secondItem="Ati-LQ-RB7" secondAttribute="leading" constant="20" symbolic="YES" id="lUz-Xl-cKK"/>
-                                        <constraint firstItem="1lH-rX-WZT" firstAttribute="top" secondItem="dGc-zC-AYJ" secondAttribute="bottom" constant="16" id="oWs-sE-I2C"/>
+                                        <constraint firstItem="1lH-rX-WZT" firstAttribute="top" secondItem="dGc-zC-AYJ" secondAttribute="bottom" constant="13" id="oWs-sE-I2C"/>
+                                        <constraint firstItem="fMc-SG-EDy" firstAttribute="top" secondItem="Ati-LQ-RB7" secondAttribute="top" constant="20" symbolic="YES" id="sk5-rM-eXa"/>
                                         <constraint firstAttribute="bottom" secondItem="N84-AY-ecA" secondAttribute="bottom" constant="20" symbolic="YES" id="tG8-ju-aU2"/>
                                         <constraint firstItem="N84-AY-ecA" firstAttribute="leading" secondItem="Ati-LQ-RB7" secondAttribute="leading" constant="20" symbolic="YES" id="tYC-un-VZK"/>
                                         <constraint firstItem="x9X-2w-cOy" firstAttribute="leading" secondItem="Ati-LQ-RB7" secondAttribute="leading" constant="20" symbolic="YES" id="vei-sy-j0Z"/>
